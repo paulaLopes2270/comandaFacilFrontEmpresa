@@ -53,7 +53,7 @@ O **Comanda Fácil Empresa** é uma aplicação web desenvolvida com Angular que
 
    ```bash
    git clone https://github.com/paulaLopes2270/comandaFacilFrontEmpresa.git
-   cd company-management-system
+ 
 Instale as dependências:
 npm install
 
@@ -85,3 +85,26 @@ Após iniciar o servidor, você poderá acessar a aplicação e realizar as segu
  - PUT /mesas/:id: Atualiza os dados de uma mesa existente.
  - DELETE /mesas/:id: Exclui uma mesa.
  - GET /reservas/empresa/:empresaId: Retorna a lista de reservas de uma empresa, com possibilidade de filtragem por data.
+
+![image](https://github.com/user-attachments/assets/80954e0d-73b2-493b-99df-a9de536ac3ee)
+
+![image](https://github.com/user-attachments/assets/56f27119-82d7-4138-9ab6-59f329e371bd)
+
+![image](https://github.com/user-attachments/assets/9fbc0e71-9ebd-49fb-9f31-931025b1594f)
+
+![image](https://github.com/user-attachments/assets/b3e2632a-a059-4cc1-b608-6cde4306fae8)
+
+![image](https://github.com/user-attachments/assets/838f5e94-73e8-4538-bc39-ddf2c8490991)
+
+![image](https://github.com/user-attachments/assets/fc13ab17-2a6c-4417-8a88-7e5ef543f1b8)
+
+![image](https://github.com/user-attachments/assets/b5406dfa-dc07-49d8-87b6-23c5a24407aa)
+
+![image](https://github.com/user-attachments/assets/2b53b689-6cb5-47b2-88e3-0d7ac65164bb)
+
+![image](https://github.com/user-attachments/assets/d900342d-1bdd-426e-9b7d-883af3979104)
+
+![image](https://github.com/user-attachments/assets/64563e96-755e-4d01-9c00-86e8d81ca3be)
+
+![image](https://github.com/user-attachments/assets/c1e84aa1-e495-4152-97fc-85a8d20296ed)
+
