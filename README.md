@@ -10,7 +10,6 @@ O **Comanda Fácil Empresa** é uma aplicação web desenvolvida com Angular que
 - **Angular**: Framework JavaScript para construção de aplicações web dinâmicas.
 - **TypeScript**: Linguagem de programação usada para desenvolvimento do projeto.
 - **HTML5 & CSS3**: Para estruturação e estilização das páginas.
-- **Bootstrap**: Framework CSS para responsividade e design moderno.
 - **Font Awesome**: Biblioteca de ícones para enriquecer a interface.
 - **RxJS**: Biblioteca para programação reativa, utilizada no Angular.
 - **JWT (JSON Web Token)**: Implementado para autenticação e autorização seguras.
