@@ -1,0 +1,98 @@
+/* Estilos gerais para a área de gerenciamento */
+.title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 200; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 20px;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-right: 10px; 
+}
+
+.btn-primary:hover {
+  background-color: #369636; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+.btn-secondary {
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+/* Ajustando o card da mesa */
+.mesa-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mesa-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mesa-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icons i {
+  cursor: pointer;
+  font-size: 1.8em; 
+  color: #555; 
+  padding: 25px; 
+}
+
+.card-icons i:hover {
+  color: #333; 
+}
+
+
+/* Estilos gerais para a área de gerenciamento */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 50px; 
+}

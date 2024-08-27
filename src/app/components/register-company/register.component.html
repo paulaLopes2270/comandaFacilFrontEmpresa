@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Spinner de carregamento -->
+<div *ngIf="isLoading" class="loading-spinner">
+  <i class="fas fa-spinner fa-spin"></i> Carregando...
+</div>
+
+<!-- Conteúdo principal da lista de empresas -->
+<div *ngIf="!isLoading" class="register-container">
+  <div class="left-panel">
+    <div class="image-upload">
+      <label for="file-input">
+        <div class="image-placeholder">
+          <img *ngIf="selectedImage" [src]="selectedImage" alt="Company Logo">
+          <div *ngIf="!selectedImage" class="upload-text">Upload Image</div>
+        </div>
+      </label>
+      <input id="file-input" type="file" (change)="onImageSelected($event)" accept="image/*">
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <h1>Cadastro da Empresa</h1>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="nome">Nome da Empresa:</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="empresaData.nome" required #nome="ngModel">
+        <div *ngIf="nome.invalid && nome.touched" class="error">Nome da empresa é obrigatório.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="empresaData.email" required #email="ngModel">
+        <div *ngIf="email.invalid && email.touched" class="error">Email é obrigatório.</div>
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" [(ngModel)]="empresaData.telefone" required #telefone="ngModel">
+        <div *ngIf="telefone.invalid && telefone.touched" class="error">Telefone é obrigatório.</div>
+      </div>
+      <div class="form-group">
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" [(ngModel)]="empresaData.endereco" required #endereco="ngModel">
+        <div *ngIf="endereco.invalid && endereco.touched" class="error">Endereço é obrigatório.</div>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="registerForm.invalid || isLoading">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Spinner de carregamento -->
+<div *ngIf="isLoading" class="loading-spinner">
+  <i class="fas fa-spinner fa-spin"></i> Carregando...
+</div>
+
+<!-- Componente de Criação/Edição de Mesa -->
+<app-create-table 
+  *ngIf="!isLoading && (isAdding || selectedTable)" 
+  [table]="selectedTable" 
+  (formSubmit)="handleFormSubmit($event)">
+</app-create-table>
+
+<!-- Conteúdo principal (aparecerá somente após o carregamento e se não estiver adicionando/editando) -->
+<div *ngIf="!isLoading && !isAdding && !selectedTable">
+  <div class="title-container">
+    <h2>Gerenciar Mesas</h2>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-primary mb-3" (click)="addTable()">Adicionar Mesa</button>
+    <button class="btn btn-secondary mb-3" (click)="goToReservations()">Gerenciar Reservas</button>
+  </div>
+
+  <div class="mesa-list-container">
+    <div *ngFor="let table of tables" class="mesa-card">
+      <h4>Mesa {{ table.numero }}</h4>
+      <p>Capacidade: {{ table.capacidade }}</p>
+      <p>Área: {{ table.area }}</p>
+      <div class="card-icons">
+        <i class="fas fa-edit" (click)="editTable(table)" title="Editar Mesa"></i>
+        <i class="fas fa-trash" (click)="deleteTable(table)" title="Excluir Mesa"></i>
+        <i 
+          class="fas" 
+          [ngClass]="{'fa-lock': table.ocupadaManualmente, 'fa-unlock': !table.ocupadaManualmente}"
+          [ngStyle]="{'color': table.ocupadaManualmente ? 'red' : 'green'}"
+          (click)="toggleTableOccupation(table)" 
+          title="Marcar como {{table.ocupadaManualmente ? 'Livre' : 'Ocupada'}}">
+        </i>
+      </div>
+    </div>
+  </div>
+</div>

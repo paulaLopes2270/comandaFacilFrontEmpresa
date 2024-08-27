@@ -1,0 +1,28 @@
+<div class="reservation-management-container">
+  <div class="filter-container">
+    <form [formGroup]="filterForm" class="filter-form">
+      <label for="dateFilter">Escolha uma data:</label>
+      <input id="dateFilter" type="date" formControlName="dateFilter" />
+    </form>
+  </div>
+
+  <div *ngIf="reservations.length > 0; else noReservations" class="reservations-list">
+    <h3>Reservas:</h3>
+    <ul>
+      <li *ngFor="let reservation of reservations" class="reservation-item">
+        <div class="reservation-card">
+          <p><strong>Data:</strong> {{ reservation.dataHora | date: 'dd/MM/yyyy, HH:mm:ss' }}</p>
+          <p><strong>Mesa:</strong> {{ reservation.mesa?.numero }}</p>
+          <p><strong>Cliente:</strong> {{ reservation.usuario?.username }}</p>
+          <p><strong>Telefone:</strong> {{ reservation.usuario?.telefone }}</p>
+          <p><strong>Número de Pessoas:</strong> {{ reservation?.numeroPessoas }}</p>
+          <p><strong>Área:</strong> {{ reservation.area }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noReservations>
+    <p>Nenhuma reserva encontrada.</p>
+  </ng-template>
+</div>

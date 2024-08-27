@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Spinner de carregamento (aparece sozinho durante o carregamento) -->
+<div *ngIf="isLoading" class="loading-spinner">
+  <i class="fas fa-spinner fa-spin"></i> Carregando...
+</div>
+
+<!-- Conteúdo principal da lista de empresas (aparece somente após o carregamento) -->
+<div *ngIf="!isLoading">
+  <div class="company-list-header">
+    <button class="register-button" (click)="navigateToRegister()">Cadastrar Empresa</button>
+  </div>
+
+  <div class="company-list-container">
+    <div *ngFor="let empresa of companies" class="company-card">
+      <!-- Exibe a imagem da empresa se estiver disponível -->
+      <img *ngIf="empresa.imagemBase64" 
+           [src]="'data:image/png;base64,' + empresa.imagemBase64" 
+           alt="{{ empresa.nome }}" 
+           class="empresa-imagem"/>
+      <h3>{{ empresa.nome }}</h3>
+      <div class="card-icons">
+        <i class="fas fa-edit" (click)="editEmpresa(empresa)" title="Editar Empresa"></i>
+        <i class="fas fa-utensils" (click)="editMenu(empresa)" title="Editar Cardápio"></i>
+        <i class="fas fa-th" (click)="manageTables(empresa)" title="Gerenciar Mesas"></i> 
+        <i class="fas fa-trash" (click)="deleteEmpresa(empresa)" title="Excluir Empresa"></i>
+      </div>
+    </div>
+  </div>
+</div>
