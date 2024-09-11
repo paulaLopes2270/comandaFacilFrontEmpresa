@@ -3,7 +3,7 @@
 
 ## Descrição
 
-O **Comanda Fácil Empresa** é uma aplicação web desenvolvida com Angular que oferece uma solução completa para gerenciamento de empresas, mesas e reservas. A plataforma permite o cadastro e edição de empresas, gerenciamento de mesas, controle de reservas, e inclui um sistema de autenticação e autorização baseado em JWT. É ideal para empresas que desejam uma interface intuitiva e eficiente para administrar suas operações.
+O **Comanda Fácil Empresa** é uma aplicação web desenvolvida com Angular que oferece uma solução completa para gerenciamento de empresas, mesas e reservas. A plataforma permite o cadastro e edição de empresas, gerenciamento de mesas, gerenciamento de cardápio, controle de reservas, e inclui um sistema de autenticação e autorização baseado em JWT. É ideal para empresas que desejam uma interface intuitiva e eficiente para administrar suas operações.
 
 ## Tecnologias Utilizadas
 
